@@ -1,0 +1,30 @@
+/* Home.css */
+.background {
+    background-image: url('../../assests/images/b_009.jpg'); /* Set the background image */
+    background-size: cover; /* Adjust the background size */
+    background-position: center; /* Center the background image */
+    height: 85vh; /* Set the height to 100% of the viewport height */
+}
+
+.search-box {
+    width: 100%; /* Set the width of the search box */
+    margin: 100px auto 0; /* Add margin to the top and center the search box horizontally */
+}
+
+.search-form {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
+    
+}
+
+.search-form input[type="text"] {
+    width: 400px; /* Set the width of the search input */
+    border: none; /* Remove border from the search input */
+    border-radius: 5px;
+}
+
+.search-form button {
+    border-radius: 5px; /* Add border radius to the search button */
+}

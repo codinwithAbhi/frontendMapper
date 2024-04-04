@@ -1,0 +1,32 @@
+.login-image {
+    height: 100vh; /* Set the height of the image to 100% of the viewport height */
+    width: 100vw; /* Set the width of the image to 100% of the viewport width */
+    object-fit: cover; /* Ensure the image covers the entire container */
+  }
+  .login-top-image {
+    max-width: 100%; /* Ensure the image is not wider than the screen */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 20px; /* Space between the image and the form */
+  }
+  
+  .password-toggle-btn {
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    outline: none;
+  }
+  
+  .password-input-group .form-control {
+    padding-right: 2.5rem; /* Adjust padding to ensure text does not overlap the icon */
+  }
+  
+  .input-group-text {
+    border: none;
+    background: transparent;
+  }
+  
+  .required {
+    color: red;
+    margin-left: 5px;
+  }
+  

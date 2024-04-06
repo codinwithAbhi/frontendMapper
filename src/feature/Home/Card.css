@@ -1,0 +1,9 @@
+.circle-button {
+    width: 50px; /* Set a fixed width */
+    height: 50px; /* Set a fixed height */
+    border-radius: 50%; /* Make the border-radius 50% to create a circle */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

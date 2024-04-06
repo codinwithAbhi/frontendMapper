@@ -1,9 +1,7 @@
-/* Header.css */
 .header {
     background-color: #048699; /* Set background color */
     color: #fff; /* Set text color */
     padding: 10px 0; /* Add padding */
-    margin-top: 0 !important; /* Remove top margin */
     position: fixed;
     width: 100%; /* Make the header span the entire width of the viewport */
     top: 0; /* Position the header at the top of the viewport */
@@ -25,4 +23,10 @@
 
 .user {
     font-size: 18px; /* Set font size */
+    margin-right: auto; /* Push the user name to the left, filling available space */
+}
+
+/* Style for logout button */
+button {
+    margin-left: 20px; /* Add space to the left of the button */
 }

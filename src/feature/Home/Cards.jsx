@@ -3,7 +3,7 @@ import { Button, Card, Row, Col } from 'react-bootstrap';
 import { BsStarFill, BsStarHalf, BsStar } from 'react-icons/bs'; // Import star icons
 import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 import { FaDirections } from 'react-icons/fa'; // Import direction icon
-import "./Card.css"
+import './Card.css'; // Import custom CSS for Card component
 
 const Cards = ({ data }) => {
     // Function to render star rating
@@ -29,36 +29,45 @@ const Cards = ({ data }) => {
         return stars;
     };
 
+    // Function to handle hover behavior
+    const handleAddressHover = (event) => {
+        const element = event.target;
+        element.style.whiteSpace = 'normal';
+        element.style.overflow = 'visible';
+        element.style.textOverflow = 'inherit';
+    };
+
     return (
         <Row xs={1} md={2} lg={4} className="g-4">
             {data.map((shop) => (
                 <Col key={shop._id}>
-                    <Card style={{ width: '18rem' }}>
-                        <div style={{ height: '200px', overflow: 'hidden' }}>
-                            <Card.Img variant="top" src={`http://localhost:8081/images/${shop.image}`} alt={shop.shopName} style={{ objectFit: 'cover', height: '100%' }} />
+                    <Card className="custom-card">
+                        <div className="card-image-container">
+                            <Card.Img
+                                variant="top"
+                                src={`http://localhost:8081/images/${shop.image}`}
+                                alt={shop.shopName}
+                                className="card-image"
+                            />
                         </div>
-                        <Card.Body>
+                        <Card.Body className="card-body">
                             <Card.Title>{shop.shopName}</Card.Title>
-                            <Card.Text>{shop.shopAddress}</Card.Text>
+                            <Card.Text className="address-text" title={shop.shopAddress}>
+                                {shop.shopAddress}
+                            </Card.Text>
                             <div className="rating">
                                 {renderStars(shop.reviewsRatio).map((star, index) => (
                                     <span key={index}>{star}</span>
                                 ))}
                             </div>
-
                         </Card.Body>
-                        <Card.Footer>
-                            <Row>
-                                <Col md={2}>
-                                    <Link style={{ textDecoration: "none", display: 'flex', flexDirection: 'column', alignItems: 'center' }} to={shop?.location}>
-                                        <Button variant="primary" className="circle-button">
-                                            <FaDirections />
-                                            <span style={{ fontSize: '12px' }}>Direction</span>
-                                        </Button>
-                                    </Link>
-                                </Col>
-                            </Row>
-
+                        <Card.Footer className="card-footer">
+                            <Link to={shop?.location} className="direction-link">
+                                <Button variant="primary" className="circle-button">
+                                    <FaDirections />
+                                </Button>
+                                <span className="direction-text">Direction</span>
+                            </Link>
                         </Card.Footer>
                     </Card>
                 </Col>

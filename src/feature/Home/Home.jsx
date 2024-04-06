@@ -9,6 +9,7 @@ import Select from 'react-select';
 import toast from "react-hot-toast"
 
 const selectOption = [
+    { label: "Kashti", value: "kashti" },
     { label: "Pune", value: "pune" }
 ];
 

@@ -50,7 +50,7 @@ function Home() {
                                     <Form.Group controlId="searchForm" className="mb-0">
                                         <Form.Control
                                             type="text"
-                                            placeholder="Search Google..."
+                                            placeholder="Search..."
                                             value={searchTerm}
                                             onChange={handleSearchChange}
                                         />
